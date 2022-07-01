@@ -1,0 +1,11 @@
+.tournament{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top:2rem;
+    text-align: center;
+}
+
+.year{
+    opacity: 60%;
+}

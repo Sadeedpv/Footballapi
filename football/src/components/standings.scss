@@ -1,0 +1,18 @@
+.grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 1.3em;
+    flex-wrap: wrap;
+}
+
+.drop{
+    margin: 10px;
+}
+
+.table{
+    display:grid;
+    place-items: center;
+    margin-top: 1.3em;
+}
