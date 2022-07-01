@@ -18,44 +18,45 @@ function League(props) {
     },[props.id, props.season])
 
   return (
-    <div>
+    <>
 
         <div className='tournament'>{props.tournament} - Season {props.season}</div>
 
-        <div className='tables'><Table striped hover responsive >
+  <Table striped hover responsive className='points-table' size={window.innerWidth > 556?'lg':'sm'}>
   <thead>
     <tr>
       <th>#</th>
       <th>Logo</th>
       <th>Name</th>
-      <th ></th>
-
       <th>Wins</th>
       <th>Loss</th>
       <th>Draws</th>
       <th>Games</th>
       <th>GF</th>
       <th>GA</th>
+      <th>Points</th>
     </tr>
   </thead>
   <tbody>
     {team && team.map((team, key) =>{
       return <tr key={key}>
         <td>{key + 1}</td>
-        <td><img src={team.team.logos[0].href} alt='team logo' width={40} height={40}/></td>
+        <td><img src={team.team.logos[0].href} alt='team logo' width={window.innerWidth > 556?40:15} height={window.innerWidth > 556?40:15}/></td>
         <td >{team.team.name}</td>
-        <td>{team.stats[0].value}</td>
-        <td>{team.stats[1].value}</td>
-        <td>{team.stats[2].value}</td>
-        <td>{team.stats[3].value}</td>
-        <td>{team.stats[4].value}</td>
-        <td>{team.stats[5].value}</td>
+        <td>{team.stats[0].value}</td> {/* wins */}
+        <td>{team.stats[1].value}</td> {/* loss */}
+        <td>{team.stats[2].value}</td> {/* draws */}
+        <td>{team.stats[3].value}</td> {/* games */}
+        <td>{team.stats[4].value}</td> {/* GF */}
+        <td>{team.stats[5].value}</td> {/* GA */}
+        <td style={{
+          fontWeight: 'bold'
+        }}>{team.stats[6].value}</td> {/* points */}
       </tr>
     })}
   </tbody>
 </Table>
-</div>
-    </div>
+</>
   )
 }
 

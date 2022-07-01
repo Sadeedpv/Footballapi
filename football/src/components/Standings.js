@@ -12,7 +12,6 @@ const [tournament, setTournament] = React.useState('Premier League');
 
 useEffect(() =>{
     axios.get('https://api-football-standings.azharimm.site/leagues').then(res => {
-        console.log(res.data.data)
         setLeague(res.data.data)
     }).catch(err =>{
         console.log(err)
@@ -25,7 +24,12 @@ const year = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2
     <div className='grid'>
 
       {/* League drop down menu */}
-
+    <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexWrap: 'wrap'
+    }}>
     <Dropdown className='drop'>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
         Select League
@@ -56,10 +60,11 @@ const year = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2
       })}
     </Dropdown.Menu>
   </Dropdown>
+  </div>
 
       {/* Table */}
 
-    <div className='table'>
+    <div className='tables'>
       <League season={season} id={id} tournament={tournament}/>
     </div>
   </div>
