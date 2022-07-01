@@ -29,6 +29,11 @@ function Navigation() {
           paddingLeft:'35px',
           fontSize: '1.2rem'
         }}>Standings</Nav.Link>
+        <Nav.Link href="https://Github.com/Sadeedpv" style={{
+          padding:'10px',
+          paddingLeft:'35px',
+          fontSize: '1.2rem'
+        }}>Github</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
