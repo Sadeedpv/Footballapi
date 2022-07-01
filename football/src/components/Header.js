@@ -8,12 +8,13 @@ function Header() {
         flexDirection:'column',
         alignItems:'center',
         justifyContent:'center',
-        fontSize: '2rem',
+        fontSize: '2.2rem',
         fontWeight: '700',
         padding:'20px',
         textAlign:'center',
         marginTop:'1.5em',
-        marginBottom:'1.5em'
+        marginBottom:'1.5em',
+        textShadow:' -2px 2px 34px rgba(70,57,255,0.27)'
     }}>
 
       <img src={football} alt='football illustration' width={500} height={300}/>

@@ -56,6 +56,7 @@ function League(props) {
     })}
   </tbody>
 </Table>
+
 </>
   )
 }

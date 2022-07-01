@@ -17,19 +17,16 @@ function Navigation() {
         <Nav.Link href="#home"  style={{
           padding:'10px',
           paddingLeft:'35px',
-          color:'#050505',
           fontSize: '1.2rem'
         }}>Transfers</Nav.Link>
         <Nav.Link href="#link" style={{
           padding:'10px',
           paddingLeft:'35px',
-          color:'#050505',
           fontSize: '1.2rem'
         }}>Fixtures</Nav.Link>
         <Nav.Link href="#link" style={{
           padding:'10px',
           paddingLeft:'35px',
-          color:'#050505',
           fontSize: '1.2rem'
         }}>Standings</Nav.Link>
       </Nav>
