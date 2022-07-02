@@ -1,0 +1,38 @@
+.cardlink{
+    text-decoration: none;
+    color: #000;
+}
+.card{
+    background-color: #fff;
+    width: 370px;
+    height:370px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px -1px 20px -3px rgba(0,0,0,0.31);
+-webkit-box-shadow: 1px -1px 20px -3px rgba(0,0,0,0.31);
+-moz-box-shadow: 1px -1px 20px -3px rgba(0,0,0,0.31);
+}
+
+.img{
+    width:350px;
+    height:350px;
+    padding: 4px;
+    padding-top: 8px;
+    align-self: center;
+    image-rendering: crisp-edges;
+    border: 2px solid white;
+    box-shadow: -32px 43px 119px -75px rgba(0,0,0,0.31);
+-webkit-box-shadow: -32px 43px 119px -75px rgba(0,0,0,0.31);
+-moz-box-shadow: -32px 43px 119px -75px rgba(0,0,0,0.31);
+}
+.card-content{
+    text-align: left;
+    padding: 12px;
+    font-weight: 700;
+}
+.cardfooter{
+    padding:4px;
+    padding-bottom:7px;
+    padding-inline-start: 10px;
+    opacity:60%
+}

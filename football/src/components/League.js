@@ -10,7 +10,6 @@ function League(props) {
     useEffect(() =>{
         axios.get(`https://api-football-standings.azharimm.site/leagues/${props.id}/standings?season=${props.season}&sort=asc`)
         .then(res => {
-            console.log(res.data.data.standings)
             setteam(res.data.data.standings)
         }).catch(err =>{
             console.log(err);
@@ -22,7 +21,11 @@ function League(props) {
 
         <div className='tournament'>{props.tournament} - Season {props.season}</div>
 
-  <Table striped hover responsive className='points-table' size={window.innerWidth > 556?'lg':'sm'}>
+  <div style={{
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+  }}><Table striped hover responsive className='points-table' size={window.innerWidth > 556?'lg':'sm'}>
   <thead>
     <tr>
       <th>#</th>
@@ -42,7 +45,7 @@ function League(props) {
       return <tr key={key}>
         <td>{key + 1}</td>
         <td><img src={team.team.logos[0].href} alt='team logo' width={window.innerWidth > 556?40:15} height={window.innerWidth > 556?40:15}/></td>
-        <td >{team.team.name}</td>
+        <td>{team.team.name}</td>
         <td>{team.stats[0].value}</td> {/* wins */}
         <td>{team.stats[1].value}</td> {/* loss */}
         <td>{team.stats[2].value}</td> {/* draws */}
@@ -55,7 +58,7 @@ function League(props) {
       </tr>
     })}
   </tbody>
-</Table>
+</Table></div>
 
 </>
   )
