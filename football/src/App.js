@@ -9,7 +9,8 @@ import Transfer from "./components/Transfer";
 
 function App() {
   useEffect(() =>{
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
+    document.documentElement.scrollTop=0;
   }, [])
   return (
     <>

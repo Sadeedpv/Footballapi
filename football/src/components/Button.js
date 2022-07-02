@@ -27,9 +27,8 @@ function Button() {
         backgroundColor:'#c9e9ff',
         padding:'4px 15px 4px 15px',
         textAlign:'center',
-        display:'grid',
-        placeItems:'center',
-        display:'none'
+        display:'none',
+        zIndex: '99999',
     }} ref={ref} onClick={() =>{
         window.scrollTo(0,0);
     }}>&#8593;</div>

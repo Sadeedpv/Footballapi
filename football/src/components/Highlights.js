@@ -24,6 +24,7 @@ function Highlights() {
         fontSize: '1.8rem',
         fontWeight: 'bold',
         marginBottom:'1.6em',
+        textAlign:'center'
     }}>Recent Highlights</div>
     <div style={{
         display: 'flex',
