@@ -33,7 +33,6 @@ function Transfer() {
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
       }
     }).then(res =>{
-      console.log(res.data.response)
       setstate(res.data.response)
     })
   }, [id])
@@ -126,6 +125,7 @@ function Player(props){
         }}>{props.name}</p></div>
   <MyVerticallyCenteredModal
         show={modalShow}
+        setModalShow = {setModalShow}
         onHide={() => setModalShow(false)}
         name={props.name}
         age={props.age}
@@ -140,6 +140,7 @@ function Player(props){
 
 function MyVerticallyCenteredModal(props) {
   const [transfer, settransfer] = React.useState();
+  const [show, setshow] = React.useState(props.show);
 
     useEffect(() =>{
     axios({
@@ -150,14 +151,16 @@ function MyVerticallyCenteredModal(props) {
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
       }
     }).then(res =>{
-      console.log(res.data.response[0])
-      // settransfer(res.data.response[0].transfers[0])
+      console.log(res.data.response[0].transfers[0])
+      settransfer(res.data.response[0].transfers[0])
     })
   }, [props.id])
   return (
     <Modal
-      show={props.show}
-      onHide={props.onHide}
+      show={show}
+      onHide={() =>{
+        setshow(false)
+      }}
       
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -175,9 +178,9 @@ function MyVerticallyCenteredModal(props) {
           <span className='p-3 fw-bold'>Age: {' '}{props.age}</span><br />
           <span className='p-3 fw-bold'>Nationality: {' '}{props.nationality}</span><br /> 
           {transfer && ( <>
-            <span className='text-danger'>OUT ⬇️:{transfer.teams.out.name} </span>
-            <span className='text-primary'>IN ⬆️: {transfer.teams.in.name}</span>
-            <span className='text-secondary'>type: {transfer.type}</span> 
+            <span className='text-danger p-3 fw-bold'>OUT ⬇️:{transfer.teams.out.name} </span>
+            <span className='text-primary p-3 fw-bold'>IN ⬆️: {transfer.teams.in.name}</span>
+            <span className='text-secondary p-3 fw-bold'>type: {transfer.type}</span> 
 
           </>)}
         </p>
