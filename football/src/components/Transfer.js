@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
-import {Modal, Button} from 'react-bootstrap'
+import {Accordion, Button} from 'react-bootstrap'
 
 function Transfer() {
 
@@ -9,6 +9,8 @@ function Transfer() {
   const [name, setname] = React.useState('Chelsea');
   const [id, setid] = React.useState(49);
   const [state, setstate] = React.useState();
+
+  const [loader, setloader] = React.useState(5)
 
   useEffect(() =>{
     axios({
@@ -86,9 +88,15 @@ function Transfer() {
         borderRadius:'6px',
       }}>Click on the players to see their transfer status</p></div>
 
-      {state && state.map((player, index) =>{
+      {state && state.slice(0,loader).map((player, index) =>{
         return <Player key={index} id={player.player.id} name={player.player.name} img={player.player.photo} age={player.player.age} nationality={player.player.nationality}/>
       })}
+      <p style={{
+        fontSize:'25px',
+        marginTop:'10px'
+      }}><Button variant='primary' onClick={() =>{
+        setloader(11)
+      }} >Load more</Button></p>
     </div>
     </>
   )
@@ -98,40 +106,40 @@ export default Transfer
 
 function Player(props){
 
-  const [modalShow, setModalShow] = React.useState(false);
 
   return(
 
-      <div onClick={() =>{
-        setModalShow(true);
-      }} style={{
+      <div style={{
         borderRadius:'7px',
         padding:'1em',
         display:'flex',
         alignItems:'center',
-        justifyContent:'space-between',
         marginTop:'1.2em',
         WebkitBoxXhadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         MozBoxShadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         boxShadow:' 4px 10px 26px -11px rgba(0,0,0,0.65)',
 
-      }}>
-
-        <img src={props.img} alt='Player photo' height={40} width={40}/>
-        <div className='ps-5 ms-5 d-flex align-items-center justify-content-center'><p style={{
+      }} >
+        <Accordion>
+        <Accordion.Item >
+          <Accordion.Header>
+          <img src={props.img} alt='Player photo' height={40} width={40}/>
+        <p className='pr-5 mr-5 ps-2' style={{
           verticalAlign:'middle',
           alignSelf:'center',
           opcaity:'0.8',
-        }}>{props.name}</p></div>
-  <MyVerticallyCenteredModal
-        show={modalShow}
-        setModalShow = {setModalShow}
-        onHide={() => setModalShow(false)}
+        }}>{props.name}</p>
+          </Accordion.Header>
+          <Accordion.Body>
+          <MyVerticallyCenteredModal
         name={props.name}
         age={props.age}
         nationality={props.nationality}
         id={props.id}
       />
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
       </div>
 
@@ -140,7 +148,6 @@ function Player(props){
 
 function MyVerticallyCenteredModal(props) {
   const [transfer, settransfer] = React.useState();
-  const [show, setshow] = React.useState(props.show);
 
     useEffect(() =>{
     axios({
@@ -156,22 +163,8 @@ function MyVerticallyCenteredModal(props) {
     })
   }, [props.id])
   return (
-    <Modal
-      show={show}
-      onHide={() =>{
-        setshow(false)
-      }}
-      
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {props.name}
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
+    <div>
+
         <h4>Latest transfer</h4>
         <p>
           <span className='p-3 fw-bold'>Name: {' '}{props.name}</span><br />
@@ -184,9 +177,6 @@ function MyVerticallyCenteredModal(props) {
 
           </>)}
         </p>
-      </Modal.Body>
-      <Modal.Footer>
-      </Modal.Footer>
-    </Modal>
+        </div>
   );
 }

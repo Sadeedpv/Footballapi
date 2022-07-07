@@ -18,7 +18,7 @@ function App() {
     <Button />
     <Header />
     <Standings />
-    {/* <Transfer /> */}
+    <Transfer />
     <Highlights />
     </>
   );
