@@ -118,11 +118,17 @@ function Player(props){
         WebkitBoxXhadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         MozBoxShadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         boxShadow:' 4px 10px 26px -11px rgba(0,0,0,0.65)',
+        width:'400px'
 
       }} >
         <Accordion>
         <Accordion.Item >
-          <Accordion.Header>
+          <Accordion.Header style={{
+            display:'flex',
+            justifyContent:'space-between',
+            alignItems:'center',
+            width:'380px',
+          }}>
           <img src={props.img} alt='Player photo' height={40} width={40}/>
         <p className='pr-5 mr-5' style={{
           verticalAlign:'center',
