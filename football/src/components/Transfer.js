@@ -94,8 +94,8 @@ function Transfer() {
       <p style={{
         fontSize:'25px',
         marginTop:'10px'
-      }}><Button variant='primary' onClick={() =>{
-        setloader(11)
+      }}><Button variant='primary' className='mt-3' onClick={() =>{
+        setloader(loader + 5)
       }} >Load more</Button></p>
     </div>
     </>
@@ -124,11 +124,12 @@ function Player(props){
         <Accordion.Item >
           <Accordion.Header>
           <img src={props.img} alt='Player photo' height={40} width={40}/>
-        <p className='pr-5 mr-5 ps-2' style={{
-          verticalAlign:'middle',
+        <p className='pr-5 mr-5' style={{
+          verticalAlign:'center',
+          alignItems:'center',
           alignSelf:'center',
           opcaity:'0.8',
-        }}>{props.name}</p>
+        }}>{props.name}{'  '} &nbsp; </p>
           </Accordion.Header>
           <Accordion.Body>
           <MyVerticallyCenteredModal
