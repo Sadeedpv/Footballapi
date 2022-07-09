@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Footballapi/static/css/main.c43b7e25.css",
-    "main.js": "/Footballapi/static/js/main.339f6bfd.js",
+    "main.js": "/Footballapi/static/js/main.804708fb.js",
     "static/media/football.png": "/Footballapi/static/media/football.ed94c7546a77d8aa7151.png",
     "index.html": "/Footballapi/index.html",
     "main.c43b7e25.css.map": "/Footballapi/static/css/main.c43b7e25.css.map",
-    "main.339f6bfd.js.map": "/Footballapi/static/js/main.339f6bfd.js.map"
+    "main.804708fb.js.map": "/Footballapi/static/js/main.804708fb.js.map"
   },
   "entrypoints": [
     "static/css/main.c43b7e25.css",
-    "static/js/main.339f6bfd.js"
+    "static/js/main.804708fb.js"
   ]
 }
