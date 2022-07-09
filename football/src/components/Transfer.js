@@ -118,7 +118,8 @@ function Player(props){
         WebkitBoxXhadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         MozBoxShadow: '4px 10px 26px -11px rgba(0,0,0,0.65)',
         boxShadow:' 4px 10px 26px -11px rgba(0,0,0,0.65)',
-        width:'400px'
+        width:'400px',
+        justifyContent:'center'
 
       }} >
         <Accordion>
