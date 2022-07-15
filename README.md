@@ -25,6 +25,6 @@ Transfer news by searching for your favourite team!
 
 ## Badge
 
-This source code is licensed under **MIT** <br />
+This source code is licensed under **Apache License 2.0** <br />
 #### Copying or distributing the source code without the permission of the author is not permitted; Please do give the credit if you do so.
-![LlICENSE](https://img.shields.io/badge/license-MIT-brightgreen)
+![LlICENSE](https://img.shields.io/badge/license-Apache%20License%202.0-green)
