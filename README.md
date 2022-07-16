@@ -21,10 +21,3 @@ Watch live scorecard of the game
 <div style='display:grid; place-items:center'><img src='https://i2-prod.football.london/tottenham-hotspur-fc/news/article23669886.ece/ALTERNATES/s1200c/0_GettyImages-1390539425.jpg' width=250/></div>
 <br />
 Transfer news by searching for your favourite team!
-
-
-## Badge
-
-This source code is licensed under **Apache License 2.0** <br />
-#### Copying or distributing the source code without the permission of the author is not permitted; Please do give the credit if you do so.
-![LlICENSE](https://img.shields.io/badge/license-Apache%20License%202.0-green)
