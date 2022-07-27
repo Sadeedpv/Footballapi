@@ -25,7 +25,7 @@ function Highlights() {
         fontWeight: 'bold',
         marginBottom:'1.6em',
         textAlign:'center'
-    }}>Recent Highlights</div>
+    }} id='highlights'>Recent Highlights</div>
     <div style={{
         display: 'flex',
         flexWrap: 'wrap',

@@ -32,19 +32,9 @@ function Navigation() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home" style={styles}>Transfers</Nav.Link>
-        <Nav.Link href="#link" style={styles} onClick={(E) =>{
-          E.preventDefault();
-          window.scrollTo(0, 14000);
-        }}>Fixtures</Nav.Link>
-        <Nav.Link href="#link" style={styles} onClick={(e) =>{
-          e.preventDefault();
-          window.scrollTo(0, 800);
-        }}>Standings</Nav.Link>
-        <Nav.Link href="#Link" style={styles} onClick={(e) =>{
-          e.preventDefault();
-          window.scrollTo(0, 1200);
-        }}>Highlights</Nav.Link>
+        <Nav.Link href="./#transfer" style={styles}>Transfers</Nav.Link>
+        <Nav.Link href="./#standings" style={styles}>Standings</Nav.Link>
+        <Nav.Link href="./#highlights" style={styles}>Highlights</Nav.Link>
         <Nav.Link href="https://Github.com/Sadeedpv" style={styles}>Github</Nav.Link>
       </Nav>
     </Navbar.Collapse>

@@ -52,7 +52,7 @@ function Transfer() {
         fontWeight: 'bold',
         marginBottom:'1.6em',
         textAlign:'center'
-    }}>Transfer News</div>
+    }} id='transfer'>Transfer News</div>
 
     <div style={{
       display:'grid',
@@ -136,7 +136,7 @@ function Player(props){
           alignItems:'center',
           alignSelf:'center',
           opcaity:'0.8',
-        }}>{props.name}{'  '} &nbsp; </p>
+        }}>{' '}{props.name}{'  '} &nbsp; </p>
           </Accordion.Header>
           <Accordion.Body>
           <MyVerticallyCenteredModal
